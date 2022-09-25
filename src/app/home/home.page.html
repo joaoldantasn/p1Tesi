@@ -14,7 +14,14 @@
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <h3>Login</h3>
+    <ion-item>
+      <ion-label>User:</ion-label>
+      <ion-input [(ngModel)]="login"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Password</ion-label>
+      <ion-input [(ngModel)]="senha"></ion-input>
+    </ion-item>
+    <ion-button (click)="usuarioValido()" color="secondary">Enter</ion-button>
   </div>
-</ion-content>

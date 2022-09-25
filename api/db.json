@@ -1,0 +1,32 @@
+
+{
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "produto 1"
+    },
+    {
+      "id": 2,
+      "nome": "produto 2"
+    },
+    {
+      "id": 3,
+      "nome": "produto 3"
+    }
+  ],
+  "usuarios":[
+    {
+      "login": "joao.lucas",
+      "senha": "123456"
+    },
+    {
+      "login": "luiz.netto",
+      "senha": "123456"
+    },
+    {
+      "login": "giovane.tiburcio",
+      "senha": "123456"
+    }
+
+  ]
+}
