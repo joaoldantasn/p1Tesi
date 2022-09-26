@@ -14,12 +14,30 @@ export class CriarusuarioPage implements OnInit {
 		private formBuilder: FormBuilder
 	) {
 		this.formLogin = this.formBuilder.group({
-			'email': [null, Validators.compose([Validators.email])],
-			'password': [null, Validators.compose([Validators.minLength(3)])]
+			'login': [null, Validators.compose([Validators.email])],
+			'senha': [null, Validators.compose([Validators.minLength(3)])],
+			'cpf': [null, Validators.compose([Validators.minLength(3)])],
+			'foto': [null, Validators.compose([Validators.minLength(3)])],
+			'idade': [null, Validators.compose([Validators.minLength(3)])],
+			'endereco': [null, Validators.compose([Validators.minLength(3)])],
+			'nome': [null, Validators.compose([Validators.minLength(3)])],
+
 		});
 
 	}
+
+
+
+	
   ngOnInit() {
   }
+
+//   "login": "joao.lucas",
+//   "senha": "123456",
+//   "cpf": "12345678900",
+//   "foto": "",
+//   "idade": "21/03/2000",
+//   "endereco": "Assis Chateubriand"
+// },
 
 }
