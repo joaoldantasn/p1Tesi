@@ -30,7 +30,9 @@
 				<ion-icon name="mail" item-start></ion-icon>
 				Data de nascimento
 			</ion-label>
-			<ion-datetime formControlName="idade" displayFormat="MM/YYYY" showPicker="false" [(ngModel)]="usuarioSaved.idade"></ion-datetime>
+			<ion-input type="text" formControlName="idade" [(ngModel)]="usuarioSaved.idade"></ion-input>
+
+			<!-- <ion-datetime formControlName="idade" displayFormat="MM/YYYY" showPicker="false" [(ngModel)]="usuarioSaved.idade"></ion-datetime> -->
 
 		</ion-item>
 

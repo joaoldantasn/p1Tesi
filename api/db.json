@@ -18,7 +18,8 @@
     {
       "login": "joao.lucas",
       "senha": "123456",
-      "cpf": "12345678900",
+      "cpf": "123.456.789-00",
+      "nome":"João Lucas Dantas",
       "foto": "",
       "idade": "21/03/2000",
       "endereco": "Assis Chateubriand"
@@ -26,7 +27,8 @@
     {
       "login": "luiz.netto",
       "senha": "123456",
-      "cpf": "212121212121",
+      "cpf": "212.121.212-21",
+      "nome":"Luiz Netto",
       "foto": "",
       "idade": "22/05/1995",
       "endereco": "Rui Barbosa"
@@ -34,7 +36,8 @@
     {
       "login": "giovane.tiburcio",
       "senha": "123456",
-      "cpf": "61598742310",
+      "cpf": "615.987.423-10",
+      "nome":"Giovane Tiburcio",
       "foto": "",
       "idade": "05/08/1999",
       "endereco": "Estelita Cruz"

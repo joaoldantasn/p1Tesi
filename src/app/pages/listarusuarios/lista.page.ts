@@ -9,16 +9,13 @@ import { Usuarios } from '../../home/usuarios';
   templateUrl: './lista.page.html',
   styleUrls: ['./lista.page.scss'],
 })
+
+// eslint-disable-next-line @typescript-eslint/naming-convention
 export class  listaPage  {
 
   usuarios = new Array<Usuarios>();
   constructor(private service: HomeService, private alertController: AlertController, private rota: Router) {
     this.service.getUsuarios().subscribe(response => (this.usuarios = response));
-
-  }
-  
-  
-;
-
+  };
 
 }
