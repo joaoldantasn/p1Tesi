@@ -9,7 +9,7 @@ const routes: Routes = [
     component: HomePage,
   },
   {
-    path: 'menu',
+    path: 'lista',
     component: listaPage
   }
 ];

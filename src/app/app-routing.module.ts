@@ -12,7 +12,7 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'menu',
+    path: 'lista',
     loadChildren: () => import('./pages/listarusuarios/lista.module').then( m => m.listaPageModule)
   },
   {
