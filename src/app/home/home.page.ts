@@ -24,8 +24,8 @@ export class HomePage {
   constructor(private formBuilder: FormBuilder, service: HomeService, private alertController: AlertController, private rota: Router) {
     service.getUsuarios().subscribe(response => (this.usuarios = response));
     this.formLogin = this.formBuilder.group({
-			'email': ['', Validators.compose([Validators.required, Validators.minLength(5)])],
-			'password': ['', Validators.compose([Validators.required, Validators.minLength(3)])]
+      'login': [null, Validators.compose([Validators.required,  Validators.minLength(6)])],
+			'senha': [null, Validators.compose([Validators.required, Validators.minLength(3)])],
 		});
   };
 
