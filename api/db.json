@@ -17,15 +17,27 @@
   "usuarios":[
     {
       "login": "joao.lucas",
-      "senha": "123456"
+      "senha": "123456",
+      "cpf": "12345678900",
+      "foto": "",
+      "idade": "21/03/2000",
+      "endereco": "Assis Chateubriand"
     },
     {
       "login": "luiz.netto",
-      "senha": "123456"
+      "senha": "123456",
+      "cpf": "212121212121",
+      "foto": "",
+      "idade": "22/05/1995",
+      "endereco": "Rui Barbosa"
     },
     {
       "login": "giovane.tiburcio",
-      "senha": "123456"
+      "senha": "123456",
+      "cpf": "61598742310",
+      "foto": "",
+      "idade": "05/08/1999",
+      "endereco": "Estelita Cruz"
     }
 
   ]
