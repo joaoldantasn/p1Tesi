@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { Router, RouterState } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
-import { findItemLabel } from '@ionic/core/dist/types/utils/helpers';
 import { HomeService } from './home.service';
-import { Produtos } from './produtos';
 import { Usuarios } from './usuarios';
 
 @Component({
@@ -16,8 +15,18 @@ export class HomePage {
   usuarios = new Array<Usuarios>();
   login = '';
   senha = '';
-  constructor(service: HomeService, private alertController: AlertController, private rota: Router) {
+
+
+  formLogin: FormGroup;
+
+	
+
+  constructor(private formBuilder: FormBuilder, service: HomeService, private alertController: AlertController, private rota: Router) {
     service.getUsuarios().subscribe(response => (this.usuarios = response));
+    this.formLogin = this.formBuilder.group({
+			'email': ['', Validators.compose([Validators.required, Validators.minLength(5)])],
+			'password': ['', Validators.compose([Validators.required, Validators.minLength(3)])]
+		});
   };
 
   verificaSeTem(){

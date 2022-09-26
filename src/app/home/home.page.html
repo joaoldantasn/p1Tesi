@@ -15,13 +15,31 @@
 
   <div id="container">
     <h3>Login</h3>
-    <ion-item>
-      <ion-label>Usuário:</ion-label>
-      <ion-input [(ngModel)]="login"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Senha:</ion-label>
-      <ion-input [(ngModel)]="senha"></ion-input>
-    </ion-item>
-    <ion-button (click)="verificaSeTem()" color="secondary">Entrar</ion-button>
+   
+
+
+
+
+    <form [formGroup]="formLogin" (ngSubmit)="verificaSeTem()">
+      <ion-item class="text-white">
+        <ion-label position="floating">
+          <ion-icon name="mail" item-start></ion-icon>
+            Usuario
+        </ion-label>
+        <ion-input type="text" formControlName="email" [(ngModel)]="login"></ion-input>
+      </ion-item>
+    
+  
+      <ion-item class="text-white">
+        <ion-label position="floating">
+          <ion-icon name="key-outline" item-start></ion-icon>
+          Senha
+        </ion-label>
+        <ion-input type="password" formControlName="password" [(ngModel)]="senha"></ion-input>
+      </ion-item>
+     
+      <br><br>
+  
+      <ion-button size="large" color="success" expand="full" type="submit" [disabled]="!formLogin.valid">Entrar</ion-button>
+    </form>
   </div>
