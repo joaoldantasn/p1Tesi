@@ -14,13 +14,13 @@ export class CriarusuarioPage implements OnInit {
 		private formBuilder: FormBuilder
 	) {
 		this.formLogin = this.formBuilder.group({
-			'login': [null, Validators.compose([Validators.email])],
-			'senha': [null, Validators.compose([Validators.minLength(3)])],
-			'cpf': [null, Validators.compose([Validators.minLength(3)])],
-			'foto': [null, Validators.compose([Validators.minLength(3)])],
-			'idade': [null, Validators.compose([Validators.minLength(3)])],
-			'endereco': [null, Validators.compose([Validators.minLength(3)])],
-			'nome': [null, Validators.compose([Validators.minLength(3)])],
+			login: [null, Validators.compose([Validators.email])],
+			senha: [null, Validators.compose([Validators.minLength(3)])],
+			cpf: [null, Validators.compose([Validators.minLength(3)])],
+			foto: [null, Validators.compose([Validators.minLength(3)])],
+			idade: [null, Validators.compose([Validators.minLength(3)])],
+			endereco: [null, Validators.compose([Validators.minLength(3)])],
+			nome: [null, Validators.compose([Validators.minLength(3)])],
 
 		});
 
@@ -28,7 +28,7 @@ export class CriarusuarioPage implements OnInit {
 
 
 
-	
+
   ngOnInit() {
   }
 
