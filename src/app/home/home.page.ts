@@ -28,7 +28,7 @@ export class HomePage {
     } else if(valido.senha !== this.senha){
       this.usuarioValido('Erro', 'Senha Inválida', '', 'OK');
     }else{
-      this.rota.navigateByUrl('menu');
+      this.rota.navigateByUrl('perfil');
     }
   };
    async usuarioValido(headeR: string, subHeadeR: string, messagE: string, buttonS: string): Promise<void>{
