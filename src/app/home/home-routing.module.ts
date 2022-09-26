@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomePage } from './home.page';
-import { MenuPage } from './menu/menu.page';
+import { listaPage } from '../pages/listarusuarios/lista.page';
 
 const routes: Routes = [
   {
@@ -10,7 +10,7 @@ const routes: Routes = [
   },
   {
     path: 'menu',
-    component: MenuPage
+    component: listaPage
   }
 ];
 

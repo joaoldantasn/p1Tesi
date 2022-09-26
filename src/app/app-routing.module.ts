@@ -13,12 +13,22 @@ const routes: Routes = [
   },
   {
     path: 'menu',
-    loadChildren: () => import('./home/menu/menu.module').then( m => m.MenuPageModule)
+    loadChildren: () => import('./pages/listarusuarios/lista.module').then( m => m.listaPageModule)
   },
   {
     path: 'perfil',
     loadChildren: () => import('./pages/meu-perfil/perfil/perfil.module').then( m => m.PerfilPageModule)
   },
+  {
+    path: 'criarusuario', // vamso precisar passar o username na url
+    loadChildren: () => import('./pages/criarusuario/criarusuario.module').then( m => m.CriarusuarioPageModule)
+  },
+  {
+    path: 'editarusuario',
+    loadChildren: () => import('./pages/editarusuario/editarusuario.module').then( m => m.EditarusuarioPageModule)
+  },
+
+
 ];
 
 @NgModule({
