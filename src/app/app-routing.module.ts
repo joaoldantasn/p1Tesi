@@ -21,7 +21,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/meu-perfil/perfil/perfil.module').then( m => m.PerfilPageModule)
   },
   {
-    path: 'criarusuario', // vamso precisar passar o username na url
+    path: 'home/criarusuario', // vamso precisar passar o username na url
     loadChildren: () => import('./pages/criarusuario/criarusuario.module').then( m => m.CriarusuarioPageModule)
   },
   {
