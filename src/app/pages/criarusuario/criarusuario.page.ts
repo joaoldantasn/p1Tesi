@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { HomeService } from 'src/app/home/home.service';
-import { Usuarios } from 'src/app/home/usuario';
+import { HomeService } from 'src/app/services/home.service';
+import { Usuarios } from 'src/app/models/usuario';
 @Component({
   selector: 'app-criarusuario',
   templateUrl: './criarusuario.page.html',

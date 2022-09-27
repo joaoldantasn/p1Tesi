@@ -31,17 +31,40 @@
       "endereco": "Estelita Cruz"
     }
   ],
-
- "filmes":[
-  {
-    "id": 1,
-    "titulo": "joao.lucas",
-    "lancamento": "123456",
-    "sinopse": "123.456.789-00",
-    "genero": "João Lucas Dantas",
-    "foto": "https://www.bing.com/th?id=ORMS.ab00efd72d5cf8f64b3911d4e172688a&pid=Wdp&w=612&h=304&qlt=90&c=1&rs=1&dpr=1&p=0",
-    "classificacao": "21/03/2000",
-    "arrecadacao": "Assis Chateubriand"
-  }
- ]
+  "filmes": [
+    {
+      "id": 1,
+      "titulo": "joao.lucas",
+      "lancamento": "123456",
+      "sinopse": "123.456.789-00",
+      "genero": "João Lucas Dantas",
+      "foto": "https://www.bing.com/th?id=ORMS.ab00efd72d5cf8f64b3911d4e172688a&pid=Wdp&w=612&h=304&qlt=90&c=1&rs=1&dpr=1&p=0",
+      "classificacao": "21/03/2000",
+      "arrecadacao": "Assis Chateubriand"
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "id": 5
+    },
+    {
+      "id": 6
+    },
+    {
+      "id": 7
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 9
+    }
+  ]
 }

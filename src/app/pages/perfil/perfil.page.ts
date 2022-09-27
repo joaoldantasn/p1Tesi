@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { HomeService } from 'src/app/home/home.service';
-import { Usuarios } from 'src/app/home/usuario';
+import { Filmes } from 'src/app/models/filmes';
+import { FilmesService } from 'src/app/services/filmes.service';
 
 @Component({
   selector: 'app-perfil',
@@ -11,24 +11,13 @@ import { Usuarios } from 'src/app/home/usuario';
 export class PerfilPage implements OnInit {
 
 
-  usuarioSaved: Usuarios = {
-	login: '',
-	senha: '',
-	cpf: '',
-	nome: '',
-	foto: '',
-	idade: '',
-	endereco: '',
-	id: 0
- };
 
-
-  public formLogin: FormGroup;
+  public formFilmes: FormGroup;
 
 	constructor(
-		private formBuilder: FormBuilder, private service: HomeService
+		private formBuilder: FormBuilder, private service: FilmesService
 	) {
-		this.formLogin = this.formBuilder.group({
+		this.formFilmes = this.formBuilder.group({
 			titulo: [null, Validators.compose([Validators.required, Validators.minLength(7)])],
 			lancamento: [null, Validators.compose([Validators.required, Validators.minLength(3)])],
 			sinopse: [null, Validators.compose([Validators.required, Validators.minLength(3)])],
@@ -42,7 +31,13 @@ export class PerfilPage implements OnInit {
 	}
 
 	criarUsuario(){
-		console.log(this.formLogin.value.titulo)
+		const filme: Filmes = this.formFilmes.value
+
+		console.log(JSON.stringify(filme))
+
+		this.service.addFilme(filme).subscribe(filme =>{
+			console.log(filme)
+		})
 		
 	}
 

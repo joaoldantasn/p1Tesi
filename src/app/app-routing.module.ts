@@ -10,7 +10,7 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./login/home.module').then( m => m.HomePageModule)
   },
   {
     path: 'lista',
@@ -18,16 +18,17 @@ const routes: Routes = [
   },
   {
     path: 'perfil',
-    loadChildren: () => import('./pages/meu-perfil/perfil/perfil.module').then( m => m.PerfilPageModule)
+    loadChildren: () => import('./pages/perfil/perfil.module').then( m => m.PerfilPageModule)
   },
   {
-    path: 'home/criarusuario', // vamso precisar passar o username na url
+    path: 'home/criarusuario', 
     loadChildren: () => import('./pages/criarusuario/criarusuario.module').then( m => m.CriarusuarioPageModule)
   },
   {
-    path: 'editarusuario',
-    loadChildren: () => import('./pages/editarusuario/editarusuario.module').then( m => m.EditarusuarioPageModule)
-  },
+    path: 'listar-filmes',
+    loadChildren: () => import('./pages/listar-filmes/listar-filmes.module').then( m => m.ListarFilmesPageModule)
+  }
+
 
 
 ];
