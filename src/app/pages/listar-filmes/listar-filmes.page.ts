@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
-import { Filmes } from 'src/app/models/filmes';
+import { Filme } from 'src/app/models/Filme';
 import { FilmesService } from 'src/app/services/filmes.service';
 
 @Component({
@@ -11,10 +11,9 @@ import { FilmesService } from 'src/app/services/filmes.service';
 })
 export class ListarFilmesPage {
 
-  filmes = new Array<Filmes>();
+  filmes = new Array<Filme>();
   constructor(private service: FilmesService, private alertController: AlertController, private rota: Router) {
     this.service.getFilmes().subscribe(response => (this.filmes = response));
-    
   };
 
 }

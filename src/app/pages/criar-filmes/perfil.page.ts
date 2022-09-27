@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Filmes } from 'src/app/models/filmes';
+import { Filme } from 'src/app/models/Filme';
 import { FilmesService } from 'src/app/services/filmes.service';
 
 @Component({

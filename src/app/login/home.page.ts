@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 import { HomeService } from '../services/home.service';
-import { Usuarios } from '../models/usuario';
+import { Usuario } from '../models/Usuario';
 
 @Component({
   selector: 'app-home',
@@ -12,8 +12,8 @@ import { Usuarios } from '../models/usuario';
 })
 export class HomePage {
   myapp = 'Myapp';
-  usuarios = new Array<Usuarios>();
- 
+  usuarios = new Array<Usuario>();
+
 
   formLogin: FormGroup;
   constructor(private formBuilder: FormBuilder, service: HomeService, private alertController: AlertController, private rota: Router) {
