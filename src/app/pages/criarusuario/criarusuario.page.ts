@@ -42,7 +42,7 @@ export class CriarusuarioPage implements OnInit {
 	}
 
 	criarUsuario(){
-		console.log(this.usuarioSaved)
+		console.log(typeof this.usuarioSaved)
 		this.service.addUsuario(this.usuarioSaved).subscribe(console.log)
 	}
 

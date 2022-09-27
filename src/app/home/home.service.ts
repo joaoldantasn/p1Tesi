@@ -17,7 +17,7 @@ export class HomeService {
   public getUsuarios(): Observable<Usuarios[]>{
     return this.http.get<Usuarios[]>(this.endpoint);
   }
-  addUsuario(u: Usuarios): Observable<any>{
+  public addUsuario(u: Usuarios): Observable<any>{
     const httpOptions = {
       // eslint-disable-next-line @typescript-eslint/naming-convention
       headers: new HttpHeaders({'Content-Type': 'db/json'})
