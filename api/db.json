@@ -20,7 +20,7 @@
       "senha": "123456",
       "cpf": "123.456.789-00",
       "nome":"João Lucas Dantas",
-      "foto": "",
+      "foto": "https://www.bing.com/th?id=ORMS.ab00efd72d5cf8f64b3911d4e172688a&pid=Wdp&w=612&h=304&qlt=90&c=1&rs=1&dpr=1&p=0",
       "idade": "21/03/2000",
       "endereco": "Assis Chateubriand"
     },
@@ -29,7 +29,7 @@
       "senha": "123456",
       "cpf": "212.121.212-21",
       "nome":"Luiz Netto",
-      "foto": "",
+      "foto": "https://www.bing.com/th?id=ORMS.ab00efd72d5cf8f64b3911d4e172688a&pid=Wdp&w=612&h=304&qlt=90&c=1&rs=1&dpr=1&p=0",
       "idade": "22/05/1995",
       "endereco": "Rui Barbosa"
     },
@@ -38,7 +38,7 @@
       "senha": "123456",
       "cpf": "615.987.423-10",
       "nome":"Giovane Tiburcio",
-      "foto": "",
+      "foto": "https://www.bing.com/th?id=ORMS.ab00efd72d5cf8f64b3911d4e172688a&pid=Wdp&w=612&h=304&qlt=90&c=1&rs=1&dpr=1&p=0",
       "idade": "05/08/1999",
       "endereco": "Estelita Cruz"
     }
