@@ -29,22 +29,10 @@ export class PerfilPage implements OnInit {
 		});
 
 	}
+    ngOnInit(): void {
 
-	criarUsuario(){
-		let filme: Filmes = this.formFilmes.value
-		console.log(filme)
-
-
-		this.service.addFilme(filme).subscribe(response =>{
-			filme = response
-			console.log(filme)
-		})
-		
-	}
-
-
-
-  ngOnInit() {
+    }
+	criarFilme(){
+		this.service.addFilme(this.formFilmes.value).subscribe();
   }
-
 }
