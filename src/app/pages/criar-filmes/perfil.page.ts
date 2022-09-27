@@ -32,8 +32,8 @@ export class PerfilPage implements OnInit {
 
 	criarUsuario(){
 		let filme: Filmes = this.formFilmes.value
+		console.log(filme)
 
-		//console.log(JSON.stringify(filme))
 
 		this.service.addFilme(filme).subscribe(response =>{
 			filme = response
