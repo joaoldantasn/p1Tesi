@@ -1,4 +1,4 @@
-export class Usuarios{
+export class Usuario{
   login: string;
   senha: string;
   cpf: string;

@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Produtos } from './produtos';
-import {Usuarios} from './usuarios';
+import {Usuario} from './usuario';
 @Injectable({
   providedIn: 'root'
 })
@@ -14,10 +14,10 @@ export class HomeService {
   public getProdutos(): Observable<Produtos[]>{
     return this.http.get<Produtos[]>(this.endpoint);
   }
-  public getUsuarios(): Observable<Usuarios[]>{
-    return this.http.get<Usuarios[]>(this.endpoint);
+  public getUsuarios(): Observable<Usuario[]>{
+    return this.http.get<Usuario[]>(this.endpoint);
   }
-  addUsuario(u: Usuarios): Observable<any>{
+  addUsuario(u: Usuario): Observable<any>{
     const httpOptions = {
       // eslint-disable-next-line @typescript-eslint/naming-convention
       headers: new HttpHeaders({'Content-Type': 'db/json'})
