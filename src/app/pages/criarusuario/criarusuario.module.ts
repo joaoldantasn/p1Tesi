@@ -12,7 +12,6 @@ import { CriarusuarioPage } from './criarusuario.page';
   imports: [
     CommonModule,
     FormsModule,
-    FormBuilder,
     ReactiveFormsModule,
     IonicModule,
     CriarusuarioPageRoutingModule

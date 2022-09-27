@@ -6,7 +6,7 @@
 
 <ion-content>
 
-  <form [formGroup]="formLogin" (ngSubmit)="login()">
+  <form [formGroup]="formLogin" (ngSubmit)="criarUsuario()">
 
 		<ion-item class="text-white">
 			<ion-label position="floating">
@@ -68,12 +68,12 @@
 				<ion-icon name="key-outline" item-start></ion-icon>
 				Senha
 			</ion-label>
-			<ion-input type="password" formControlName="password"></ion-input>
+			<ion-input type="password" formControlName="senha" [(ngModel)]="usuarioSaved.senha"></ion-input>
 		</ion-item>
 		
 		<br><br>
 
-		<ion-button size="large" color="success" expand="full" type="submit" [disabled]="!formLogin.valid">Login</ion-button>
+		<ion-button size="large" color="success" expand="full" type="submit" >Criar</ion-button>
 	</form>
   
 </ion-content>
