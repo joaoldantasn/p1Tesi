@@ -27,7 +27,12 @@ const routes: Routes = [
   {
     path: 'listar-filmes',
     loadChildren: () => import('./pages/listar-filmes/listar-filmes.module').then( m => m.ListarFilmesPageModule)
+  },
+  {
+    path: 'editar-filme/:id',
+    loadChildren: () => import('./pages/editar-filme/editar-filme.module').then( m => m.EditarFilmePageModule)
   }
+
 
 
 
