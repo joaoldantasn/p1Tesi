@@ -1,4 +1,4 @@
-export  interface Usuarios{
+export class Usuarios{
   login: string;
   senha: string;
   cpf: string;
@@ -6,7 +6,7 @@ export  interface Usuarios{
   foto: string;
   idade: string;
   endereco: string;
-  id:number
+  id: number;
 
   
 }
