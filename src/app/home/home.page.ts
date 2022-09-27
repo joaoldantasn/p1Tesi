@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 import { HomeService } from './home.service';
-import { Usuarios } from './usuarios';
+import { Usuarios } from './usuario';
 
 @Component({
   selector: 'app-home',

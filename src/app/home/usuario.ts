@@ -6,6 +6,7 @@ export  interface Usuarios{
   foto: string;
   idade: string;
   endereco: string;
+  id:number
 
   
 }

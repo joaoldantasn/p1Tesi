@@ -1,4 +1,3 @@
-
 {
   "produtos": [
     {
@@ -14,34 +13,39 @@
       "nome": "produto 3"
     }
   ],
-  "usuarios":[
+  "usuarios": [
     {
+      "id": 1,
       "login": "joao.lucas",
       "senha": "123456",
       "cpf": "123.456.789-00",
-      "nome":"João Lucas Dantas",
-      "foto": "",
+      "nome": "João Lucas Dantas",
+      "foto": "https://www.bing.com/th?id=ORMS.ab00efd72d5cf8f64b3911d4e172688a&pid=Wdp&w=612&h=304&qlt=90&c=1&rs=1&dpr=1&p=0",
       "idade": "21/03/2000",
       "endereco": "Assis Chateubriand"
     },
     {
+      "id": 2,
       "login": "luiz.netto",
       "senha": "123456",
       "cpf": "212.121.212-21",
-      "nome":"Luiz Netto",
-      "foto": "",
+      "nome": "Luiz Netto",
+      "foto": "https://www.bing.com/th?id=ORMS.ab00efd72d5cf8f64b3911d4e172688a&pid=Wdp&w=612&h=304&qlt=90&c=1&rs=1&dpr=1&p=0",
       "idade": "22/05/1995",
       "endereco": "Rui Barbosa"
     },
     {
+      "id": 3,
       "login": "giovane.tiburcio",
       "senha": "123456",
       "cpf": "615.987.423-10",
-      "nome":"Giovane Tiburcio",
-      "foto": "",
+      "nome": "Giovane Tiburcio",
+      "foto": "https://www.bing.com/th?id=ORMS.ab00efd72d5cf8f64b3911d4e172688a&pid=Wdp&w=612&h=304&qlt=90&c=1&rs=1&dpr=1&p=0",
       "idade": "05/08/1999",
       "endereco": "Estelita Cruz"
+    },
+    {
+      "id": 4
     }
-
   ]
 }

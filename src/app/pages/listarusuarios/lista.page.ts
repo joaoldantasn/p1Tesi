@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
+import { Usuarios } from 'src/app/home/usuario';
 import { HomeService } from '../../home/home.service';
-import { Usuarios } from '../../home/usuarios';
 
 @Component({
   selector: 'app-lista',
