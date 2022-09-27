@@ -9,7 +9,7 @@
 
 <ion-content>
 
-  <form [formGroup]="formFilmes" (ngSubmit)="criarUsuario()">
+  <form [formGroup]="formFilmes" (ngSubmit)="criarFilme()">
 
 		<ion-item class="text-white">
 			<ion-label position="floating">
@@ -55,7 +55,7 @@
 			</ion-label>
 			<ion-input type="text" formControlName="genero" ></ion-input>
 		</ion-item>
-		
+
 		<ion-item class="text-white">
 			<ion-label position="floating">
 				<ion-icon name="mail" item-start></ion-icon>
@@ -63,8 +63,8 @@
 			</ion-label>
 			<ion-input type="text" formControlName="classificacao" ></ion-input>
 		</ion-item>
-		
-		
+
+
 
 		<ion-item class="text-white">
 			<ion-label position="floating">
@@ -73,12 +73,12 @@
 			</ion-label>
 			<ion-input type="text" formControlName="arrecadacao" ></ion-input>
 		</ion-item>
-		
+
 		<br><br>
 
 		<ion-button size="large" color="success" expand="full" type="submit"  [disabled]="!formFilmes.valid">Criar</ion-button>
 		<ion-button routerLink="../" expand="full" size="large" type="reset" >Voltar</ion-button>
 
 	</form>
-  
+
 </ion-content>

@@ -11,15 +11,17 @@ export class FilmesService {
   endpoint = 'http://localhost:3000/filmes';
   constructor(public http: HttpClient) { }
 
-  
+
   public getFilmes(): Observable<Filmes[]>{
     return this.http.get<Filmes[]>(this.endpoint);
   }
   public addFilme(filme: Filmes): Observable<any>{
     const httpOptions = {
       // eslint-disable-next-line @typescript-eslint/naming-convention
-      headers: new HttpHeaders({'Content-Type': 'db/json'})
+      headers: new HttpHeaders({'Content-Type': 'application/json'})
     };
+
+    console.log(filme);
     return this.http.post(this.endpoint, JSON.stringify(filme), httpOptions);
   }
 }
