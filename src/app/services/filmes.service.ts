@@ -23,4 +23,8 @@ export class FilmesService {
     console.log(filme);
     return this.http.post(this.endpoint, JSON.stringify(filme), httpOptions);
   }
+
+  public remove(id: number): Observable<any>{
+    return this.http.delete(`${this.endpoint}/${id}`);
+  }
 }

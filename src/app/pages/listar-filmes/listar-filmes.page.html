@@ -23,9 +23,9 @@
           <ion-card-subtitle>{{filme.arrecadacao}}</ion-card-subtitle>
           <ion-card-subtitle>{{filme.genero}}</ion-card-subtitle>
         </ion-card-header>
-        <ion-card-content>
-          <ion-button routerLink="editar-filme/{{filme.id}}" color="success" slot="end">Editar filme</ion-button>
-
+        <ion-card-content class="display: flex">
+          <ion-button routerLink="excluir-filme/{{filme.id}}" color="success" slot="end">Editar filme</ion-button>
+          <ion-button (click)="excluirFilme(filme.id, filme.titulo)" color="danger" slot="end">Excluir filme</ion-button>
         </ion-card-content>
 
       </ion-card>

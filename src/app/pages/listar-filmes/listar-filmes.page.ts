@@ -16,4 +16,12 @@ export class ListarFilmesPage {
     this.service.getFilmes().subscribe(response => (this.filmes = response));
   };
 
+  excluirFilme(id: number, titulo: string) {
+    const toExclude = confirm('Deseja excluir o filme ' + titulo + ' ?');
+    if(toExclude) {
+      this.service.remove(id).subscribe(response => alert('Filme removido com sucesso!'));
+      this.service.getFilmes().subscribe(response => (this.filmes = response));
+
+    }
+  }
 }

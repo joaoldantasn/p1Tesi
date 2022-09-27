@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
-import { HomeService } from '../services/home.service';
-import { Usuario } from '../models/Usuario';
+import { HomeService } from '../../services/home.service';
+import { Usuario } from '../../models/Usuario';
 
 @Component({
   selector: 'app-home',
