@@ -4,24 +4,26 @@
       <ion-buttons slot="start">
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
-      <ion-title>Lista de usuarios</ion-title>
+      <ion-title>Lista de filmes</ion-title>
+      <ion-button routerLink="criar-filme" color="success" slot="end">Criar filme</ion-button>
+
+
     </ion-toolbar>
   </ion-header>
   <ion-content class="ion-padding">
 
-    <div *ngFor='let user of usuarios'>
+    <div *ngFor='let filme of filmes'>
 
 
       <ion-card>
-        <img src={{user.foto}} />
+        <img src={{filme.foto}} />
         <ion-card-header>
-          <ion-card-title>{{user.nome}}</ion-card-title>
-          <ion-card-subtitle>{{user.idade}}</ion-card-subtitle>
-          <ion-card-subtitle>{{user.cpf}}</ion-card-subtitle>
-          <ion-card-subtitle>Mora na rua: {{user.endereco}}</ion-card-subtitle>
+          <ion-card-title>{{filme.titulo}}</ion-card-title>
+          <ion-card-subtitle>{{filme.lancamento}}</ion-card-subtitle>
+          <ion-card-subtitle>{{filme.arrecadacao}}</ion-card-subtitle>
+          <ion-card-subtitle>{{filme.genero}}</ion-card-subtitle>
         </ion-card-header>
         <ion-card-content>
-          Estudante de Sistemas de Informação - UNIFACISA
         </ion-card-content>
       </ion-card>
 

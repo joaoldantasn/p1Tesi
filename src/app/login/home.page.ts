@@ -13,9 +13,7 @@ import { Usuarios } from '../models/usuario';
 export class HomePage {
   myapp = 'Myapp';
   usuarios = new Array<Usuarios>();
-  login = '';
-  senha = '';
-
+ 
 
   formLogin: FormGroup;
   constructor(private formBuilder: FormBuilder, service: HomeService, private alertController: AlertController, private rota: Router) {
@@ -27,14 +25,14 @@ export class HomePage {
   };
 
   verificaSeTem(){
-    const valido = this.usuarios.find(user =>user.login === this.login);
+    const valido = this.usuarios.find(user =>user.login === this.formLogin.value.login);
     console.log(valido);
     if(typeof valido === 'undefined'){
       this.usuarioValido('Erro', 'Usuário Inválido', '', 'OK');
-    } else if(valido.senha !== this.senha){
+    } else if(valido.senha !== this.formLogin.value.senha){
       this.usuarioValido('Erro', 'Senha Inválida', '', 'OK');
     }else{
-      this.rota.navigateByUrl('perfil');
+      this.rota.navigateByUrl('lista');
     }
   };
    async usuarioValido(headeR: string, subHeadeR: string, messagE: string, buttonS: string): Promise<void>{

@@ -31,11 +31,12 @@ export class PerfilPage implements OnInit {
 	}
 
 	criarUsuario(){
-		const filme: Filmes = this.formFilmes.value
+		let filme: Filmes = this.formFilmes.value
 
-		console.log(JSON.stringify(filme))
+		//console.log(JSON.stringify(filme))
 
-		this.service.addFilme(filme).subscribe(filme =>{
+		this.service.addFilme(filme).subscribe(response =>{
+			filme = response
 			console.log(filme)
 		})
 		

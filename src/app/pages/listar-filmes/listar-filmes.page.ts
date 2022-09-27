@@ -14,6 +14,7 @@ export class ListarFilmesPage {
   filmes = new Array<Filmes>();
   constructor(private service: FilmesService, private alertController: AlertController, private rota: Router) {
     this.service.getFilmes().subscribe(response => (this.filmes = response));
+    
   };
 
 }
