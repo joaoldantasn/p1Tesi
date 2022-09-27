@@ -4,9 +4,9 @@ import { Filme } from 'src/app/models/Filme';
 import { FilmesService } from 'src/app/services/filmes.service';
 
 @Component({
-  selector: 'app-perfil',
-  templateUrl: './perfil.page.html',
-  styleUrls: ['./perfil.page.scss'],
+  selector: 'app-criar-filme',
+  templateUrl: './criar-filme.page.html',
+  styleUrls: ['./criar-filme.page.scss'],
 })
 export class PerfilPage implements OnInit {
 

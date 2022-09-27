@@ -18,7 +18,7 @@ const routes: Routes = [
   },
   {
     path: 'listar-filmes/criar-filme',
-    loadChildren: () => import('./pages/criar-filmes/perfil.module').then( m => m.PerfilPageModule)
+    loadChildren: () => import('./pages/criar-filme/criar-filme.module').then( m => m.CriarFilmeModule)
   },
   {
     path: 'listar-filmes',
@@ -28,10 +28,6 @@ const routes: Routes = [
     path: 'editar-filme/:id',
     loadChildren: () => import('./pages/editar-filme/editar-filme.module').then( m => m.EditarFilmePageModule)
   }
-
-
-
-
 ];
 
 @NgModule({
