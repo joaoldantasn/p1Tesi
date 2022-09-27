@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Usuarios } from 'src/app/home/usuarios';
+import { Usuario } from 'src/app/home/usuario';
 
 @Component({
   selector: 'app-criarusuario',
@@ -10,7 +10,7 @@ import { Usuarios } from 'src/app/home/usuarios';
 export class CriarusuarioPage implements OnInit {
 
 
- public usuarioSaved : Usuarios;
+ public usuarioSaved : Usuario;
 
   public formLogin: FormGroup;
 
@@ -18,13 +18,13 @@ export class CriarusuarioPage implements OnInit {
 		private formBuilder: FormBuilder
 	) {
 		this.formLogin = this.formBuilder.group({
-			'login': [null, Validators.compose([Validators.required, Validators.email])],
-			'senha': [null, Validators.compose([Validators.required, Validators.minLength(3)])],
-			'cpf': [null, Validators.compose([Validators.required, Validators.minLength(3)])],
-			'foto': [null, Validators.compose([Validators.required, Validators.minLength(3)])],
-			'idade': [null, Validators.compose([Validators.required, Validators.minLength(3)])],
-			'endereco': [null, Validators.compose([Validators.required, Validators.minLength(3)])],
-			'nome': [null, Validators.compose([Validators.required, Validators.minLength(3)])],
+			login: [null, Validators.compose([Validators.required, Validators.email])],
+			senha: [null, Validators.compose([Validators.required, Validators.minLength(3)])],
+			cpf: [null, Validators.compose([Validators.required, Validators.minLength(3)])],
+			foto: [null, Validators.compose([Validators.required, Validators.minLength(3)])],
+			idade: [null, Validators.compose([Validators.required, Validators.minLength(3)])],
+			endereco: [null, Validators.compose([Validators.required, Validators.minLength(3)])],
+			nome: [null, Validators.compose([Validators.required, Validators.minLength(3)])],
 
 		});
 
