@@ -10,7 +10,7 @@ import { Usuarios } from 'src/app/home/usuario';
 export class CriarusuarioPage implements OnInit {
 
 
-  usuarioSaved : Usuarios = {
+  usuarioSaved: Usuarios = {
 	login: '',
 	senha: '',
 	cpf: '',
@@ -19,8 +19,7 @@ export class CriarusuarioPage implements OnInit {
 	idade: '',
 	endereco: '',
 	id: 0
-
- }
+ };
 
 
   public formLogin: FormGroup;
@@ -44,6 +43,8 @@ export class CriarusuarioPage implements OnInit {
 	criarUsuario(){
 		console.log(typeof this.usuarioSaved)
 		this.service.addUsuario(this.usuarioSaved).subscribe(console.log)
+		console.log(this.usuarioSaved);
+		this.service.addUsuario(this.usuarioSaved).subscribe(console.log);
 	}
 
 
