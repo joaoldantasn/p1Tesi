@@ -17,7 +17,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/listarusuarios/lista.module').then( m => m.listaPageModule)
   },
   {
-    path: 'listar-filmes/criar-filme',
+    path: 'criar-filme',
     loadChildren: () => import('./pages/criar-filme/criar-filme.module').then( m => m.CriarFilmeModule)
   },
   {

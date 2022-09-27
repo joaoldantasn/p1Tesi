@@ -5,7 +5,7 @@
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
       <ion-title>Lista de filmes</ion-title>
-      <ion-button routerLink="criar-filme" color="success" slot="end">Criar filme</ion-button>
+      <ion-button routerLink="/criar-filme" color="success" slot="end">Criar filme</ion-button>
 
 
     </ion-toolbar>
@@ -24,7 +24,7 @@
           <ion-card-subtitle>{{filme.genero}}</ion-card-subtitle>
         </ion-card-header>
         <ion-card-content class="display: flex">
-          <ion-button routerLink="excluir-filme/{{filme.id}}" color="success" slot="end">Editar filme</ion-button>
+          <ion-button routerLink="/editar-filme/{{filme.id}}" color="success" slot="end">Editar filme</ion-button>
           <ion-button (click)="excluirFilme(filme.id, filme.titulo)" color="danger" slot="end">Excluir filme</ion-button>
         </ion-card-content>
 
