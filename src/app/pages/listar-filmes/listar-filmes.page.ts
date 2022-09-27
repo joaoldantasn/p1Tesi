@@ -9,19 +9,21 @@ import { FilmesService } from 'src/app/services/filmes.service';
   templateUrl: './listar-filmes.page.html',
   styleUrls: ['./listar-filmes.page.scss'],
 })
-export class ListarFilmesPage {
+export class ListarFilmesPage implements OnInit{
 
   filmes = new Array<Filme>();
   constructor(private service: FilmesService, private alertController: AlertController, private rota: Router) {
-    this.service.getFilmes().subscribe(response => (this.filmes = response));
   };
+
+  ngOnInit(): void {
+    this.service.getFilmes().subscribe(response => (this.filmes = response));
+  }
 
   excluirFilme(id: number, titulo: string) {
     const toExclude = confirm('Deseja excluir o filme ' + titulo + ' ?');
     if(toExclude) {
       this.service.remove(id).subscribe(response => alert('Filme removido com sucesso!'));
       this.service.getFilmes().subscribe(response => (this.filmes = response));
-
     }
   }
 }

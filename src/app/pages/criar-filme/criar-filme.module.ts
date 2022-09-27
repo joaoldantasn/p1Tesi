@@ -6,7 +6,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { CriarFilmeRoutingModule } from './criar-filme-routing.module';
 
-import { PerfilPage } from './criar-filme.page';
+import { CriarFilmePage } from './criar-filme.page';
 
 @NgModule({
   imports: [
@@ -16,6 +16,6 @@ import { PerfilPage } from './criar-filme.page';
     IonicModule,
     CriarFilmeRoutingModule
   ],
-  declarations: [PerfilPage]
+  declarations: [CriarFilmePage]
 })
 export class CriarFilmeModule {}
