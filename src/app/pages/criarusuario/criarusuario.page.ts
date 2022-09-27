@@ -18,7 +18,7 @@ export class CriarusuarioPage implements OnInit {
 	foto: '',
 	idade: '',
 	endereco: '',
-	id: 4
+	id: 0
  };
 
 
