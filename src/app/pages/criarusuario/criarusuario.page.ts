@@ -36,12 +36,4 @@ export class CriarusuarioPage implements OnInit {
   ngOnInit() {
   }
 
-//   "login": "joao.lucas",
-//   "senha": "123456",
-//   "cpf": "12345678900",
-//   "foto": "",
-//   "idade": "21/03/2000",
-//   "endereco": "Assis Chateubriand"
-// },
-
 }
