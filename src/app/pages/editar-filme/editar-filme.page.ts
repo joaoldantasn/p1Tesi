@@ -22,33 +22,46 @@ export class EditarFilmePage  implements OnInit {
 	constructor(private route:ActivatedRoute,
 		private formBuilder: FormBuilder, private service: FilmesService, private router: Router, private alertController: AlertController
 	) {
-    this.userId = this.route.snapshot.params["id"];
-    this.service.getFilme(2).subscribe(response =>this.filme =response)
-    console.log(this.filme)
-
-		this.formFilmes = this.formBuilder.group({
-			titulo: [this.filme.titulo, Validators.compose([Validators.required, Validators.minLength(7)])],
-			lancamento: [this.filme.lancamento, Validators.compose([Validators.required, Validators.min(41900)])],
-			sinopse: [this.filme.sinopse, Validators.compose([Validators.required, Validators.minLength(30)])],
-			foto: [this.filme.foto, Validators.compose([Validators.required, Validators.minLength(10)])],
-			genero: [this.filme.genero, Validators.compose([Validators.required, Validators.minLength(3)])],
-			classificacao: [this.filme.classificacao, Validators.compose([Validators.required, Validators.minLength(3)])],
-			arrecadacao: [this.filme.arrecadacao, Validators.compose([Validators.required, Validators.minLength(3)])],
-
-		});
-
+   
 	}
     ngOnInit(): void {
     
+
+		this.formFilmes = this.formBuilder.group({
+			titulo: [null, Validators.compose([Validators.required, Validators.minLength(7)])],
+			lancamento: [null, Validators.compose([Validators.required, Validators.min(41900)])],
+			sinopse: [null, Validators.compose([Validators.required, Validators.minLength(30)])],
+			foto: [null, Validators.compose([Validators.required, Validators.minLength(10)])],
+			genero: [null, Validators.compose([Validators.required, Validators.minLength(3)])],
+			classificacao: [null, Validators.compose([Validators.required, Validators.minLength(3)])],
+			arrecadacao: [null, Validators.compose([Validators.required, Validators.minLength(3)])],
+
+		});
+		this.userId = this.route.snapshot.params["id"];
+		this.service.getFilme(this.userId).subscribe(response => {
+			this.filme = response
+
+			this.formFilmes = this.formBuilder.group({
+				titulo: [this.filme.titulo, Validators.compose([Validators.required, Validators.minLength(7)])],
+				lancamento: [this.filme.lancamento, Validators.compose([Validators.required, Validators.min(41900)])],
+				sinopse: [this.filme.sinopse, Validators.compose([Validators.required, Validators.minLength(30)])],
+				foto: [this.filme.foto, Validators.compose([Validators.required, Validators.minLength(10)])],
+				genero: [this.filme.genero, Validators.compose([Validators.required, Validators.minLength(3)])],
+				classificacao: [this.filme.classificacao, Validators.compose([Validators.required, Validators.minLength(3)])],
+				arrecadacao: [this.filme.arrecadacao, Validators.compose([Validators.required, Validators.minLength(3)])],
+	
+			});
+		})
     }
 
 	criarFilme(){
-		this.service.addFilme(this.formFilmes.value).subscribe(()=>{
-			this.usuarioValido()
+		console.log(this.formFilmes.value)
+		this.service.updateFilme(this.userId, this.formFilmes.value).subscribe(()=>{
+			this.usuarioValido().then(()=>{	this.router.navigate(['/listar-filmes'])
+		})
+
 		});
 
-    this.router.navigate(['/listar-filmes']).then(() => {
-    });;
   }
 
 

@@ -19,8 +19,6 @@ export class FilmesService {
       // eslint-disable-next-line @typescript-eslint/naming-convention
       headers: new HttpHeaders({'Content-Type': 'application/json'})
     };
-
-    console.log(filme);
     return this.http.post(this.endpoint, JSON.stringify(filme), httpOptions);
   }
 
@@ -30,5 +28,14 @@ export class FilmesService {
 
   public getFilme(id: number): Observable<Filme>{
     return this.http.get<Filme>(`${this.endpoint}/${id}`);
+  }
+
+
+  public updateFilme(id: number, filme: Filme): Observable<any>{
+    const httpOptions = {
+      // eslint-disable-next-line @typescript-eslint/naming-convention
+      headers: new HttpHeaders({'Content-Type': 'application/json'})
+    };
+    return this.http.put(this.endpoint+'/'+id, JSON.stringify(filme), httpOptions);
   }
 }
