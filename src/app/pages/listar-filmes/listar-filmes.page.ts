@@ -19,11 +19,48 @@ export class ListarFilmesPage implements OnInit{
     this.service.getFilmes().subscribe(response => (this.filmes = response));
   }
 
-  excluirFilme(id: number, titulo: string) {
-    const toExclude = confirm('Deseja excluir o filme ' + titulo + ' ?');
-    if(toExclude) {
-      this.service.remove(id).subscribe(response => alert('Filme removido com sucesso!'));
+  excluirFilme(id: number) {
+      this.service.remove(id).subscribe(()=>{
+
+        this.alertController.create({
+          subHeader: `Operacao realizada com sucesso!`,
+          buttons: [
+            {
+              text: 'Continuar',
+              handler: () => {
+              }
+            }
+          ]
+        }).then(res => {
+          res.present();
+        });
+
+
+      });
       this.service.getFilmes().subscribe(response => (this.filmes = response));
-    }
+  
+  }
+
+
+
+ async showConfirm(id: number, titulo: string) {
+    this.alertController.create({
+      subHeader: `Você está prestes a apagar o filme: ${titulo}`,
+      buttons: [
+        {
+          text: 'Confirmar',
+          handler: () => {
+            this.excluirFilme(id)
+          }
+        },
+        {
+          text: 'Cancelar',
+          handler: () => {
+          }
+        }
+      ]
+    }).then(res => {
+      res.present();
+    });
   }
 }

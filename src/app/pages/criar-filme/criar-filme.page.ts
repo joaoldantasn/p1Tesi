@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { FilmesService } from 'src/app/services/filmes.service';
 import { Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 @Component({
   selector: 'app-criar-filme',
   templateUrl: './criar-filme.page.html',
@@ -14,7 +15,7 @@ export class CriarFilmePage implements OnInit {
   public formFilmes: FormGroup;
 
 	constructor(
-		private formBuilder: FormBuilder, private service: FilmesService, private router: Router
+		private formBuilder: FormBuilder, private service: FilmesService, private router: Router, private alertController: AlertController
 	) {
 		this.formFilmes = this.formBuilder.group({
 			titulo: [null, Validators.compose([Validators.required, Validators.minLength(7)])],
@@ -32,10 +33,21 @@ export class CriarFilmePage implements OnInit {
 
     }
 	criarFilme(){
-		this.service.addFilme(this.formFilmes.value).subscribe();
-    alert('Filme criado com sucesso');
+		this.service.addFilme(this.formFilmes.value).subscribe(()=>{
+			this.usuarioValido()
+		});
+
     this.router.navigate(['/listar-filmes']).then(() => {
-      window.location.reload();
     });;
   }
+
+
+
+  async usuarioValido(): Promise<void>{
+	const alert = await this.alertController.create({
+		subHeader: `Operacao realizada com sucesso!`,
+		buttons: ['Continuar']
+	});
+	await alert.present();
+   }
 }
