@@ -19,9 +19,9 @@ export class CriarFilmePage implements OnInit {
 	) {
 		this.formFilmes = this.formBuilder.group({
 			titulo: [null, Validators.compose([Validators.required, Validators.minLength(7)])],
-			lancamento: [null, Validators.compose([Validators.required, Validators.minLength(3)])],
-			sinopse: [null, Validators.compose([Validators.required, Validators.minLength(3)])],
-			foto: [null, Validators.compose([Validators.required, Validators.minLength(3)])],
+			lancamento: [null, Validators.compose([Validators.required, Validators.min(41900)])],
+			sinopse: [null, Validators.compose([Validators.required, Validators.minLength(30)])],
+			foto: [null, Validators.compose([Validators.required, Validators.minLength(10)])],
 			genero: [null, Validators.compose([Validators.required, Validators.minLength(3)])],
 			classificacao: [null, Validators.compose([Validators.required, Validators.minLength(3)])],
 			arrecadacao: [null, Validators.compose([Validators.required, Validators.minLength(3)])],
