@@ -19,9 +19,9 @@
         <img src={{filme.foto}} />
         <ion-card-header>
           <ion-card-title>{{filme.titulo}}</ion-card-title>
-          <ion-card-subtitle>{{filme.lancamento}}</ion-card-subtitle>
-          <ion-card-subtitle>{{filme.arrecadacao}}</ion-card-subtitle>
-          <ion-card-subtitle>{{filme.genero}}</ion-card-subtitle>
+          <ion-card-subtitle>Gênero: {{filme.genero}}</ion-card-subtitle>
+          <ion-card-subtitle>Ano de Lançamento: {{filme.lancamento}}</ion-card-subtitle>
+          <ion-card-subtitle>Valor arrecadado: {{filme.arrecadacao}}</ion-card-subtitle>
         </ion-card-header>
         <ion-card-content class="display: flex">
           <ion-button routerLink="/editar-filme/{{filme.id}}" color="success" slot="end">Editar filme</ion-button>
