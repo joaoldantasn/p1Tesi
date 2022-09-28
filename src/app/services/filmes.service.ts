@@ -27,4 +27,8 @@ export class FilmesService {
   public remove(id: number): Observable<any>{
     return this.http.delete(`${this.endpoint}/${id}`);
   }
+
+  public getFilme(id: number): Observable<Filme>{
+    return this.http.get<Filme>(`${this.endpoint}/${id}`);
+  }
 }

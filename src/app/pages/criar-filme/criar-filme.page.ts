@@ -34,11 +34,11 @@ export class CriarFilmePage implements OnInit {
     }
 	criarFilme(){
 		this.service.addFilme(this.formFilmes.value).subscribe(()=>{
-			this.usuarioValido()
+			this.usuarioValido().then(()=>{	this.router.navigate(['/listar-filmes'])
+		})
+
 		});
 
-    this.router.navigate(['/listar-filmes']).then(() => {
-    });;
   }
 
 

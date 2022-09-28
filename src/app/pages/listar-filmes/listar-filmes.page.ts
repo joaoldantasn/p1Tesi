@@ -22,6 +22,8 @@ export class ListarFilmesPage implements OnInit{
   excluirFilme(id: number) {
       this.service.remove(id).subscribe(()=>{
 
+        this.service.getFilmes().subscribe(response => (this.filmes = response));
+
         this.alertController.create({
           subHeader: `Operacao realizada com sucesso!`,
           buttons: [
@@ -37,7 +39,6 @@ export class ListarFilmesPage implements OnInit{
 
 
       });
-      this.service.getFilmes().subscribe(response => (this.filmes = response));
   
   }
 
