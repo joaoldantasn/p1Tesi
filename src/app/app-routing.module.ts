@@ -13,7 +13,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/login/home.module').then( m => m.HomePageModule)
   },
   {
-    path: 'lista',
+    path: 'listar-usuarios',
     loadChildren: () => import('./pages/listarusuarios/lista.module').then( m => m.listaPageModule)
   },
   {

@@ -43,16 +43,6 @@
       "id": 1
     },
     {
-      "titulo": "semmmmmmmmmmmm",
-      "lancamento": "semmmmmmmmmmmm",
-      "sinopse": "semmmmmmmmmmmmjjjjjjjjjjjjjjjjjjjjjjjjj",
-      "foto": "semmmmmmmmmmmm",
-      "genero": "semmmmmmmmmmmm",
-      "classificacao": "semmmmmmmmmmmm",
-      "arrecadacao": "semmmmmmmmmmmm",
-      "id": 2
-    },
-    {
       "titulo": "\t\t\tthis.router.navigate(['/listar-filmes'])",
       "lancamento": "\t\t\tthis.router.navigate(['/listar-filmes'])",
       "sinopse": "\t\t\tthis.router.navigate(['/listar-filmes'])",
