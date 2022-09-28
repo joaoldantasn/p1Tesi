@@ -32,7 +32,7 @@ export class HomePage {
     } else if(valido.senha !== this.formLogin.value.senha){
       this.usuarioValido('Erro', 'Senha Inválida', '', 'OK');
     }else{
-      this.rota.navigateByUrl('lista');
+      this.rota.navigateByUrl('listar-filmes');
     }
   };
    async usuarioValido(headeR: string, subHeadeR: string, messagE: string, buttonS: string): Promise<void>{
